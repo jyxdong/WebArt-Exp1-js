@@ -1,0 +1,203 @@
+html, body {
+    width:100%;
+    margin:0;
+    overflow-x:clip;
+}
+
+#walking-person {
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    z-index:1;
+    width:70px;
+    height:auto;
+}
+
+#room-1 {
+    height: 100vh;
+    box-sizing:border-box;
+    padding:12.5vh 0;
+    display:flex;
+    flex-direction:column;
+    background-image: url("../images/pixil-frame-0.png");
+    background-size: 88px 40px;
+    background-repeat: repeat;
+    background-position: center;
+    image-rendering: pixelated;
+}
+
+.wizard-furniture {
+    position:static;
+    width:50%;
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+
+}
+
+.wizard-furniture img {
+    width:auto;
+    height:auto;
+}
+
+.wizard-furniture:first-child,
+.wizard-furniture:last-child {
+    margin-left:50%;
+}
+
+.front-door {
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    height:100%;
+    width:250px;
+    background-color:#d8f6ce;
+}
+
+
+.wall {
+    position:relative;
+    height:10px;
+    width:100%;
+    background-color: #412b12;
+}
+
+#room-2 {
+    position:relative;
+    height:120vh;
+    overflow:hidden;
+    background-image: url("../images/pixil-frame-1.png");
+    background-size: 88px 88px;
+    background-repeat: repeat;
+}
+
+.room-2-chicken {
+    position:absolute;
+    width:96px;
+    height:auto;
+    image-rendering:pixelated;
+    animation:chicken-walk 8s linear infinite alternate;
+    transition:width 0.3s;
+}
+
+#chicken-1 {
+    top:25%;
+    left:35%;
+}
+
+#chicken-2 {
+    top:60%;
+    left:65%;
+}
+
+#chicken-3 {
+    top:40%;
+    left:80%;
+}
+
+#chicken-4 {
+    top:10%;
+    left:14%;
+}
+
+@keyframes chicken-walk {
+    from {
+        transform:translate(-50%, 0);
+    }
+    to {
+        transform:translate(-50%, 30vh);
+    }
+}
+
+#room-3 {
+    position:relative;
+    height:140vh;
+    display:flex;
+    align-items:flex-start;
+    background-image: url("../images/pixil-frame-2.png");
+    background-position: center;
+    background-size: 88px 88px;
+    background-repeat: repeat;
+}
+
+.room-3-lamp {
+    position:sticky;
+    top:20px;
+    flex:none;
+    width:48px;
+    height:auto;
+    image-rendering:pixelated;
+}
+
+#lamp-left-2 {
+    margin-top: 20px;
+    margin-left:calc(50% - 249px);
+}
+
+#lamp-left-1 {
+    margin-left:12px;
+    margin-top: 20px;
+}
+
+#lamp-right-1 {
+    margin-top: 20px;
+    margin-left:282px;
+}
+
+#lamp-right-2 {
+    
+    margin-top: 20px;
+    margin-left:12px;
+}
+
+#room-3-bookcase {
+    position:absolute;
+    top:50%;
+    left:10px;
+    transform:translateY(-50%);
+    width:192px;
+    height:auto;
+    image-rendering:pixelated;
+}
+
+#broken-television {
+    position:sticky;
+    top:20px;
+    flex:none;
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:10px;
+    width:192px;
+    height:auto;
+    image-rendering:pixelated;
+}
+
+#room-3-rug {
+    position:absolute;
+    right:10px;
+    bottom:10px;
+    width:auto;
+    height:224px;
+    image-rendering:pixelated;
+}
+
+@keyframes television-blink {
+    0%, 48.48%, 54.55%, 100% {
+        opacity:1;
+    }
+    45.45%, 51.52% {
+        opacity:0;
+    }
+}
+
+@keyframes room-blink {
+    0%, 48.48%, 54.55%, 100% {
+        filter:brightness(1);
+    }
+    45.45%, 51.52% {
+        filter:brightness(0.25);
+    }
+}
